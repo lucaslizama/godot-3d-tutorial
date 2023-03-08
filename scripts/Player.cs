@@ -40,6 +40,7 @@ public partial class Player : CharacterBody3D
     _velocity.X = direction.X * Speed;
     _velocity.Z = direction.Z * Speed;
     _velocity.Y -= FallAcceleration * (float)delta;
+    _velocity.Y = Mathf.Clamp(_velocity.Y, -10f, float.MaxValue);
 
     Velocity = _velocity;
 
