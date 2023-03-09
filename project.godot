@@ -15,6 +15,11 @@ run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.0", "C#")
 config/icon="res://icon.png"
 
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=540
+
 [dotnet]
 
 project/assembly_name="Squash the Creeps (3D)"
@@ -56,8 +61,13 @@ jump={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="player"
+3d_physics/layer_2="enemies"
+3d_physics/layer_3="world"
+
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
 quality/driver/driver_name="GLES2"
 quality/filters/msaa=3
